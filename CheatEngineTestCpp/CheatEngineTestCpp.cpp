@@ -13,17 +13,35 @@ int main()
 {
 	printf("Hello World!\n");
 	system("PAUSE");
+
 	string mystr;
-	int counter = 0;
-	int countByFives = 0; 
 	mystr = "";
+
+	//Basic Integers
+	int counter = 0;
+	int countByFives = 0;
+
+	//Pointers
+	int *pc, c;
+	c = 5;
+	pc = &c;   
+
 	while (mystr != "e") {
-		cout << "Counter: " << counter << endl;
-		cout << "Count by Fives: " << countByFives << endl;
-		cout << "What's next? ";
-		getline(cin, mystr);
+
+		//Increment
 		counter++;
 		countByFives += 5;
+		c++;
+
+		//Display values via console
+		cout << "Counter: " << counter << endl;
+		cout << "Count by Fives: " << countByFives << endl;
+		cout << "Address of c (&c): " << &c << endl;
+		cout << "Value of c (c): " << c << endl << endl;
+
+		cout << "What's next? ";
+		getline(cin, mystr);
+
 	}
     return 0;
 }
